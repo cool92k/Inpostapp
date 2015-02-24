@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	</head>
+	<body class="container">
+		<a style="width: 100%; display:inline-block; margin-bottom: 20px;" href="http://www.indiapost.gov.in/Index.aspx">
+			<div style="float: left; width: 349px;">
+			<img src="http://www.indiapost.gov.in/images/logo.jpg"></div>
+		</a>
+		<div class="row" style="margin-left:10px">
+			<!-- <div class="col-md-2"></div> -->
+			<div class="col-md-10">
+				<fieldset>
+					<legend style="color:#cd3333;font-size:200%;font-family:'Times New Roman'">Order Confirmation</legend>
+					<p>Thank You <%= @package.first_name %> <%= @package.last_name %> for Scheduling a Package Pickup.</p><br>
+					<p>Pickup is Confirmed at the Date: <%= @package.schedule.date %> on Time: <%= @package.schedule.time %>
+					</p>
+					<br>
+					<p>
+					At your <%= @package.address_type %> Address: <%= @package.address %></p><br>
+				</fieldset>
+			</div>
+		</div>
+	</body>
+</html>

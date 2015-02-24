@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	</head>
+	<body class="container">
+		<a style="width: 100%; display:inline-block; margin-bottom: 20px;" href="http://www.indiapost.gov.in/Index.aspx">
+			<div style="float: left; width: 349px;">
+			<img src="http://www.indiapost.gov.in/images/logo.jpg"></div>
+		</a>
+		<div class="row" style="margin-left:10px">
+			<div class="col-md-4">
+				<legend style="color:#cd3333;font-size:200%;font-family:'Times New Roman'">Schedule Pickup</legend>
+				<form method="post" action="/step2/<%= @psid %>">
+					
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="date" class="form-control" name="date" id="date" placeholder="Date" required>
+					</div>
+					<div class="form-group">
+						<label for="time">Time</label>
+						<input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
+					</div>
+					<div class="form-group">
+						<label for="weight">Approximate Weight</label>
+						<input type="number" class="form-control" name="weight" id="weight" placeholder="Weight" max="25" required>
+					</div>
+					<button type="submit" class="btn btn-default">Schedule</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

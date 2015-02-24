@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<style type="text/css">
+			.right-field{margin-top: 20px;}
+		</style>
+	</head>
+	<body class="container">
+		<a style="width: 100%; display:inline-block; margin-bottom: 20px;" href="http://www.indiapost.gov.in/Index.aspx" >
+			<div style="float: left; width: 349px;">
+			<img src="http://www.indiapost.gov.in/images/logo.jpg"></div>
+		</a>
+		<div class="row" style="margin-left:10px">
+			<div class="col-md-12">
+				<legend style="color:#cd3333;font-size:200%;font-family:'Times New Roman'">Package Pickup</legend>
+				<form method="post" action="/step1">
+					<fieldset class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+								<label for="firstname">First Name</label>
+								<input type="text" class="form-control" name="first_name" id="firstname" placeholder="First Name" required>
+							</div>
+							<div class="form-group">
+								<label for="lastname">Last Name</label>
+								<input type="text" class="form-control" name="last_name" id="lastname" placeholder="Last Name" required>
+							</div>
+							<div class="form-group">
+								<label for="InputEmail1">Email Address</label>
+								<input type="email" class="form-control" name="email" id="InputEmail1" placeholder="Enter email" required>
+							</div>
+							<button type="submit" class="btn btn-default">Register</button>
+						</div>
+						<div class="col-md-2">
+							
+						</div>
+						<div class="col-md-5">
+							<div class="form-group right-field">
+								<label for="address">
+									<select class="form-control" name="address_type" required>
+										<option value="" class="text-muted"> Select Address</option>
+										<option value="Home">Home Address</option>
+										<option value="Office">Office Address</option>
+									</select>
+								</label>
+								<textarea class="form-control" row="5" name="address" id="address" placeholder="Address" required></textarea>
+							</div>
+							<div class="form-group right-field">
+								<label for="teleno">
+									<select class="form-control" name="number_type" required>
+										<option value="">Select Telephone No.</option>
+										<option value="Home">Home</option>
+										<option value="Office">Office</option>
+									</select>
+								</label>
+								<input type="number" class="form-control" name="number" id="teleno" placeholder="Telephone No." max="9999999999" required>
+							</div>
+						</div>
+					</fieldset>
+					
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
