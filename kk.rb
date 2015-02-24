@@ -2,7 +2,11 @@ require 'sinatra'
 require 'data_mapper'
 require 'dm-migrations'
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/package_schedule.db")
+if Sinatra::Base.production?
+	DataMapper::setup(:default, "postgres://wakhurrrlmkewu:TyNE-TE1RyqIMTYfzqgXB2Hf-P@ec2-50-17-202-29.compute-1.amazonaws.com:5432/d40tjkvuuga6lu")
+else
+	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/package_schedule.db")
+end
 
 class Package
 	include DataMapper::Resource
@@ -14,7 +18,7 @@ class Package
 	property :address_type, String, :required => true
 	property :address, Text, :required => true
 	property :number_type, String, :required => true
-	property :number, Integer, :required => true
+	property :number, Integer, :required => true, :min => 0, :max => 281474976710656
 	property :created, DateTime, :required => true
 
 	has 1, :schedule
