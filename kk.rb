@@ -50,8 +50,6 @@ end
 get "/step3/:package_id" do
 	psid = params[:package_id]
 	@package = Package.get(psid)
-	
-
 	erb :exp3
 end
 
